@@ -1,0 +1,40 @@
+*What is Docker?
+Docker is a containerization platform that provides an easy way to containerize your application
+which means, using Docker you can build images and run the images to create an containers and also push these containers 
+to container registries such as DockerHub, Quay.io.
+
+*What is an Image?
+Image is nothing but a filesystem snapshot + metadata (env, vars, default etc)
+
+*What is Container?
+Container is a lightweight standalone and executable pakage of software that includes everything needed to run an application
+- code, runtime, system tools, system libraries and settings.
+
+*Difference between Image & Container?
+
+Docker Image 
+A Docker Image is a read-only template containing a set of instructions for creating a Docker container. 
+It is analogous to a class in Object-Oriented Programming (OOP)—a blueprint from which multiple objects (containers) can be created.
+
+Docker Container
+A Docker Container is a runnable instance of a Docker Image. If an image is the blueprint of a house, the container is the actual house built from that blueprint.
+
+*What is Docker Hub?
+Docker Hub is the world’s largest cloud-based container registry and repository service provided by Docker, designed for developers tostore, manage, share, and distribute Docker container images.
+
+*Commands that I have learned about Docker
+
+Docker --version : Shows docker install
+Docker ps : Shows running  container 
+Docker ps -a : Shows all container start and stopped
+Docker images : Shows images
+Docker pull (image name) : To pull an images
+Docker run -d -p 8080:80 nginx : To run in background + port mapping 
+Docker stop (container id) : To stop container 
+Docker start (container id) : To start container
+Docker remove (container id) : To remove container
+Docker logs (container id) : To view logs.  
+
+
+
+ 
