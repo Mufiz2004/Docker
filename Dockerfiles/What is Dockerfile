@@ -1,0 +1,16 @@
+A Dockerfile is a text file with a set of instructions to build a docker image.
+Docker build reads the Dockerfile and produces an image layer by layer.
+Eace instruction usually creates a new layer, which can be catched and reuse.
+
+
+Here is the meaning of each Dockerfile step :-
+
+FROM :- Mandatory first instruction in most Dockerfiles. Sets the base layer of your image.
+RUN :- Install Dependencies 
+COPY/ADD :- Copies file/directories from build context (local directory) into the image.
+WORKDIR :- Sets the working directory for subsequent instructions (RUN, CMD, ENTRY, COPY, ADD)
+ENV :- Set environment variables in the image.
+EXPOSE :- It informs Docker and humans which ports the container listens on.
+CMD :- Default Container Command. Specifies the default container command to run when a container starts.
+      Can be overridden by providing a command in docker run.
+      Only one CMD is used (last one in Dockerfile if multiple are defined).
