@@ -1,1 +1,1 @@
-This folder contains the Dockerfile Project.
+This folder contains What is Dockerfile and the Dockerfile Project.
