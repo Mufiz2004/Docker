@@ -1,1 +1,17 @@
+What is Docker Volume? 
+--> A Docker Volume is a permanent storage area where your container’s data is stored safely, even if the container is deleted.
 
+Why Do We Need Docker Volumes?
+--> To persist data, share data between containers, and safely store application data such as databases.
+Containers are Ephemeral, like 
+- If you delete a containers, its internal filesystem changes are lost.
+- Updating images or deploying may recreate containers from scratch 
+Many applications (Database,stateful services) need persistent data that survives containers deletion.
+
+Types of Docker Volumes
+--> 1. Named Volume 
+A Named Volume is a volume with a user-defined name that Docker manages automatically.
+--> 2. Anonymous Volumes
+An Anonymous Volume is automatically created by Docker without a custom name.
+--> 3. Bind Volumes
+A Bind Mount connects a directory from your host machine directly into the container.
