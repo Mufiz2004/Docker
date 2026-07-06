@@ -11,7 +11,7 @@ Learn Docker networking by creating a custom bridge network and enabling communi
 - Apache (httpd)
 - Linux
 - curl
-- 
+
 ## Project Architecture
 
 Host Machine
