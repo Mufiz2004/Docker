@@ -1,1 +1,47 @@
+🐳 Docker Compose Notes
 
+What is Docker Compose?
+Docker Compose is a tool used to define and manage multi-container Docker applications using a single YAML configuration file called docker-compose.yml (or compose.yaml).
+
+Why Docker Compose?
+
+Without Docker Compose:
+* Run each container separately
+* Create networks manually
+* Configure ports manually
+* Manage volumes manually
+* Remember long Docker commands
+
+With Docker Compose:
+* Everything is stored inside one YAML file
+* One command starts the entire application
+* Containers automatically communicate through a shared network
+* Easy to stop, rebuild, and restart applications
+
+Basic Commands to know of Docker Compose
+
+Start containers
+docker compose up
+
+Start in detached mode
+docker compose up -d
+
+Stop containers
+docker compose stop
+
+Stop and remove containers
+docker compose down
+
+Rebuild images
+docker compose up --build
+
+Rebuild and run in background
+docker compose up -d --build
+
+Restart services
+docker compose restart
+
+View logs
+docker compose logs
+for live logs use
+docker compose logs -f.
