@@ -1,0 +1,50 @@
+What is Docker Networking?
+Docker networking allows containers to communicate with each other and with external systems. By default, containers are isolated, but Docker provides different network drivers to enable secure and efficient communication.
+
+Docker Network Types
+
+- Bridge – Default network for containers on a single host.
+- Host – Shares the host machine's network stack.
+- None – Disables networking for the container.
+- Overlay – Connects containers across multiple Docker hosts.
+- Macvlan – Assigns a MAC address, making the container appear as a physical device on the network.
+
+Basic Commands of Docker Networking
+
+bash
+# Create a custom bridge network
+docker network create web-network
+
+# List all networks
+docker network ls
+
+# Inspect a network
+docker network inspect web-network
+
+# Run a container on a specific network
+docker run -d --name nginx-server --network web-network nginx
+
+# Connect an existing container to a network
+docker network connect web-network container-name
+
+# Disconnect a container from a network
+docker network disconnect web-network container-name
+
+# Remove a network
+docker network rm web-network
+
+#Project Highlights
+
+- Created a custom bridge network (`web-network`)
+- Connected Nginx and Apache (httpd) containers
+- Verified both containers using `docker network inspect`
+- Tested container-to-container communication using Docker's internal DNS:
+  ```bash
+  curl http://apache-server
+  ```
+- Successfully accessed the Apache web server from the Nginx container without using IP addresses.
+
+# Key Learning
+
+Docker provides built-in DNS-based service discovery, allowing containers on the same custom network to communicate 
+using container names instead of IP addresses. This makes container communication simple, reliable, and scalable.
