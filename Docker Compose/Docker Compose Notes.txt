@@ -1,0 +1,52 @@
+🐳 Docker Compose
+
+📖 What is Docker Compose?
+Docker Compose is a tool used to define and manage multi-container Docker applications using a single YAML configuration file (docker-compose.yml or compose.yaml).
+Instead of running multiple docker run commands manually, Docker Compose allows you to start all services with a single command.
+
+🎯 Why Docker Compose?
+Docker Compose helps you to:
+* Run multiple containers together
+* Define infrastructure as code
+* Simplify container management
+* Automatically create a network for services
+* Easily scale services
+* Start and stop the complete application with one command
+
+Basic Commands to know of Docker Compose.
+
+# Start services
+docker compose up
+
+# Start in background
+docker compose up -d
+
+# Stop services
+docker compose stop
+
+# Start stopped services
+docker compose start
+
+# Restart services
+docker compose restart
+
+# Stop and remove everything
+docker compose down
+
+# Build images
+docker compose build
+
+# Rebuild and start
+docker compose up --build
+
+# View running services
+docker compose ps
+
+# View logs
+docker compose logs
+
+# Follow logs
+docker compose logs -f
+
+# Enter a running container
+docker compose exec web bash
